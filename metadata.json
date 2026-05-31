@@ -1,0 +1,6 @@
+{
+  "name": "MCA Nexus AI",
+  "description": "Futuristic AI-powered MCA Study Assistant featuring next-generation holographic interfaces, study hubs, gamified quiz battles, AI solvers, code playgrounds, and career accelerators.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

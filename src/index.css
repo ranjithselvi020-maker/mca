@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;750&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Futuristic glassmorphism */
+  .cyber-glass {
+    background: rgba(11, 15, 25, 0.65);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Intense hover glassmorphism */
+  .cyber-glass-hover {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .cyber-glass-hover:hover {
+    background: rgba(11, 15, 25, 0.85);
+    border: 1px solid rgba(6, 182, 212, 0.4);
+    box-shadow: 0 0 25px rgba(6, 182, 212, 0.15);
+    transform: translateY(-2px);
+  }
+
+  /* Sleek cyber card highlight */
+  .cyber-panel {
+    background: linear-gradient(135deg, rgba(16, 21, 35, 0.8) 0%, rgba(10, 14, 23, 0.95) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    box-shadow: 0 10px 45px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Vibrant Holographic Grid Background */
+  .hologram-grid {
+    background-size: 24px 24px;
+    background-image: 
+      linear-gradient(to right, rgba(6, 182, 212, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(6, 182, 212, 0.04) 1px, transparent 1px);
+    background-color: #030712;
+  }
+
+  /* AI Glowing Pulse Effect */
+  .ai-pulse-glow {
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.7);
+    animation: pulseGlow 2.5s infinite;
+  }
+
+  /* Neon Glowing Border */
+  .neon-border-cyan {
+    border-color: rgba(6, 182, 212, 0.45);
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
+  }
+
+  .neon-border-purple {
+    border-color: rgba(217, 70, 239, 0.45);
+    box-shadow: 0 0 10px rgba(217, 70, 239, 0.15);
+  }
+
+  .neon-border-blue {
+    border-color: rgba(59, 130, 246, 0.45);
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.15);
+  }
+
+  /* Custom minimal styling for modern scrollbar elements */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(11, 15, 25, 0.4);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(6, 182, 212, 0.25);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 182, 212, 0.55);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0.4);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px 10px rgba(139, 92, 246, 0);
+  }
+  100% {
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 rgba(139, 92, 246, 0);
+  }
+}
+
+/* Floating Particles Core Anims */
+.particle-container {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
